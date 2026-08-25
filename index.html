@@ -1,0 +1,2671 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- ★ 이 랜딩의 유일한 정체 식별자. DB(site)와 GA(concept)가 이 값 하나를 공유함. -->
+  <script>window.SITE_ID = 'fr-factcheck';</script>
+
+  <script
+    id="Cookiebot"
+    src="https://consent.cookiebot.com/uc.js"
+    data-cbid="cced738a-fa5f-4aff-8391-a37454d4b7ab"
+    data-blockingmode="auto"
+    type="text/javascript">
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F5F5F7" />
+
+  <title>Vérification IA des appels — assurance, banque : ne doutez plus</title>
+  <meta
+    name="description"
+    content="L'IA répond à votre place aux appels d'assurance, de carte bancaire ou d'opérateur, et vérifie les montants et conditions annoncés."
+  />
+
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+  <link
+    rel="stylesheet"
+    crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root{
+      --bg:#F5F5F7;
+      --surface:#FFFFFF;
+      --surface-soft:#EFEFF1;
+      --surface-soft-2:#F2F2F4;
+      --surface-blue:#EEF2FF;
+      --surface-green:#F3F6E9;
+
+      --ink:#111113;
+      --text:#1D1D1F;
+      --muted:#6E6E73;
+      --subtle:#8E8E93;
+
+      --line:#D9D9DE;
+      --line-strong:#C7C7CC;
+
+      --cobalt:#3F7FE0;
+      --cobalt-hover:#3269C4;
+      --signal:#C9FF57;
+      --danger:#E95360;
+      --warning:#E7A62E;
+      --success:#229B6D;
+
+      --radius-control:10px;
+      --radius-button:12px;
+      --radius-card:18px;
+      --radius-media:22px;
+
+      --page-pad:clamp(16px,4vw,56px);
+      --max:1320px;
+      --ease:cubic-bezier(.16,1,.3,1);
+      --header-h:64px;
+
+      --font-ko:"Pretendard Variable",Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      --font-en:"Manrope","Pretendard Variable",Pretendard,sans-serif;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    .ic{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0}
+    .ic svg{width:1em;height:1em;display:block}
+
+    html{
+      scroll-behavior:smooth;
+      background:var(--bg);
+      -webkit-text-size-adjust:100%;
+    }
+
+    body{
+      min-width:0;
+      overflow-x:hidden;
+      background:var(--bg);
+      color:var(--text);
+      font-family:var(--font-ko);
+      font-size:16px;
+      line-height:1.6;
+      letter-spacing:-.018em;
+      -webkit-font-smoothing:antialiased;
+      text-rendering:optimizeLegibility;
+    }
+
+    html[lang="fr"] body{letter-spacing:-.01em}
+
+    html[lang="ko"] h1,
+    html[lang="ko"] h2,
+    html[lang="ko"] h3,
+    html[lang="ko"] p,
+    html[lang="ko"] button,
+    html[lang="ko"] a{
+      word-break:keep-all;
+    }
+
+    html[lang="fr"] h1,
+    html[lang="fr"] h2,
+    html[lang="fr"] h3,
+    html[lang="fr"] p,
+    html[lang="fr"] button,
+    html[lang="fr"] a{
+      word-break:normal;
+      overflow-wrap:anywhere;
+      hyphens:auto;
+    }
+
+    a{color:inherit;text-decoration:none}
+    button,input{font:inherit}
+    button{cursor:pointer}
+    img,video{display:block;width:100%;max-width:100%}
+    button,a{-webkit-tap-highlight-color:transparent}
+
+    :focus-visible{
+      outline:3px solid rgba(63,127,224,.26);
+      outline-offset:3px;
+    }
+
+    .container{
+      width:min(100%,var(--max));
+      margin-inline:auto;
+      padding-inline:var(--page-pad);
+    }
+
+    .section{padding:clamp(76px,9vw,136px) 0}
+    .section-soft{background:#EFEFF1}
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:9px;
+      color:var(--muted);
+      font:700 12px/1 var(--font-en);
+      letter-spacing:.08em;
+      text-transform:uppercase;
+    }
+
+    .eyebrow::before{
+      content:"";
+      width:7px;
+      height:7px;
+      border-radius:50%;
+      background:var(--signal);
+      box-shadow:0 0 0 5px rgba(201,255,87,.13);
+    }
+
+    .section-head{
+      display:grid;
+      grid-template-columns:minmax(0,1.2fr) minmax(260px,.8fr);
+      gap:30px;
+      align-items:end;
+      margin-bottom:30px;
+    }
+
+    .section-head h2,
+    .survey-intro h2,
+    .trust-copy h2,
+    .faq-head h2{
+      margin-top:14px;
+      color:var(--ink);
+      font-size:clamp(38px,5.3vw,72px);
+      line-height:1.02;
+      letter-spacing:-.05em;
+      font-weight:620;
+      text-wrap:balance;
+    }
+
+    html[lang="fr"] .section-head h2,
+    html[lang="fr"] .survey-intro h2,
+    html[lang="fr"] .trust-copy h2,
+    html[lang="fr"] .faq-head h2{
+      letter-spacing:-.035em;
+    }
+
+    .section-head>p{
+      justify-self:end;
+      max-width:430px;
+      color:var(--muted);
+      font-size:15px;
+      line-height:1.65;
+    }
+
+    .btn{
+      min-height:48px;
+      border:1px solid transparent;
+      border-radius:var(--radius-button);
+      padding:0 18px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      font-weight:650;
+      transition:
+        background .2s var(--ease),
+        border-color .2s var(--ease),
+        transform .2s var(--ease),
+        color .2s var(--ease);
+    }
+
+    .btn:active{transform:translateY(1px)}
+    .btn-primary{background:var(--cobalt);color:#fff}
+    .btn-primary:hover{background:var(--cobalt-hover)}
+    .btn-secondary{background:#fff;color:var(--text);border-color:var(--line-strong)}
+    .btn-secondary:hover{background:#F8F8FA}
+    .btn-dark{background:var(--ink);color:#fff}
+    .btn[disabled]{cursor:not-allowed;opacity:.45}
+
+    /* HEADER */
+    .header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(245,245,247,.88);
+      border-bottom:1px solid rgba(17,17,19,.08);
+      backdrop-filter:blur(18px);
+      -webkit-backdrop-filter:blur(18px);
+    }
+
+    .nav{
+      min-height:var(--header-h);
+      display:flex;
+      align-items:center;
+      gap:18px;
+    }
+
+    .brand{
+      color:var(--ink);
+      font:700 20px/1 var(--font-en);
+      letter-spacing:-.045em;
+      white-space:nowrap;
+    }
+
+    .brand .accent{color:var(--cobalt)}
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:22px;
+      margin-left:28px;
+      color:var(--muted);
+      font-size:13px;
+      font-weight:650;
+    }
+
+    .nav-actions{
+      margin-left:auto;
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+
+    .nav .btn{
+      min-height:40px;
+      padding-inline:14px;
+      font-size:13px;
+    }
+
+    /* ============================================================
+       HERO — 핵심 HTML 구조와 동일
+       단일 이미지 카드 + 이미지 위 카피/상태카드 + CTA는 카드 아래
+       ============================================================ */
+    .hero{
+      position:relative;
+      padding:clamp(52px,6.2vw,88px) 0 clamp(46px,5.5vw,72px);
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 80% 8%,rgba(63,127,224,.08),transparent 26%),
+        radial-gradient(circle at 16% 78%,rgba(201,255,87,.07),transparent 20%),
+        linear-gradient(180deg,#FBFBFD,#F5F5F7);
+    }
+
+    .hero-single{display:block}
+
+    .hero-shell-embedded{
+      position:relative;
+      overflow:hidden;
+      border:1px solid #D8D8DC;
+      border-radius:var(--radius-media);
+      background:linear-gradient(145deg,#ECECF0,#E2E2E7);
+      min-height:620px;
+      box-shadow:0 18px 45px rgba(0,0,0,.055);
+    }
+
+    .hero-image-embedded{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      object-position:center center;
+    }
+
+    .hero-embedded-veil{
+      position:absolute;
+      inset:0;
+      background:linear-gradient(
+        90deg,
+        rgba(16,20,30,0) 0%,
+        rgba(16,20,30,0) 42%,
+        rgba(16,20,30,.18) 58%,
+        rgba(16,20,30,.52) 100%
+      );
+      pointer-events:none;
+    }
+
+    .hero-embedded-overlay{
+      position:relative;
+      z-index:2;
+      min-height:620px;
+      display:flex;
+      justify-content:flex-end;
+      align-items:center;
+      padding:clamp(28px,4vw,44px);
+    }
+
+    .hero-embedded-copy{
+      width:min(100%,500px);
+      padding:20px 20px 4px;
+      border-radius:20px;
+      background:rgba(18,21,27,.12);
+      backdrop-filter:blur(8px);
+      -webkit-backdrop-filter:blur(8px);
+    }
+
+    .hero-embedded-copy .eyebrow{
+      margin-bottom:16px;
+      color:rgba(255,255,255,.88);
+    }
+
+    .hero-embedded-copy .eyebrow::before{
+      box-shadow:0 0 0 5px rgba(201,255,87,.10);
+    }
+
+    .hero-embedded-copy h1{
+      max-width:100%;
+      color:#fff;
+      font-size:clamp(39px,4.4vw,60px);
+      line-height:1.03;
+      letter-spacing:-.045em;
+      font-weight:760;
+      text-wrap:balance;
+      text-shadow:0 10px 30px rgba(0,0,0,.20);
+    }
+
+    .hero-embedded-copy h1 .soft{
+      display:block;
+      margin-top:10px;
+      color:rgba(255,255,255,.86);
+      font-weight:640;
+    }
+
+    .hero-risk-card{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:12px;
+      align-items:center;
+      padding:15px;
+      border-radius:15px;
+      background:rgba(255,255,255,.93);
+      border:1px solid rgba(17,17,19,.09);
+      backdrop-filter:blur(16px);
+      -webkit-backdrop-filter:blur(16px);
+      box-shadow:0 14px 36px rgba(0,0,0,.08);
+    }
+
+    .risk-icon{
+      width:40px;
+      height:40px;
+      border-radius:12px;
+      display:grid;
+      place-items:center;
+      background:#EEF6F0;
+      color:var(--success);
+      font-weight:800;
+    }
+
+    .hero-risk-card strong{
+      display:block;
+      font-size:14px;
+      line-height:1.35;
+    }
+
+    .hero-risk-card p{
+      margin-top:3px;
+      color:var(--muted);
+      font-size:12px;
+      line-height:1.4;
+    }
+
+    .hero-actions{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      gap:10px;
+      margin-top:28px;
+    }
+
+    .hero-actions-below{
+      justify-content:center;
+      margin-top:18px;
+    }
+
+    .hero-note{
+      width:100%;
+      color:var(--subtle);
+      font-size:13px;
+      font-weight:600;
+      text-align:center;
+    }
+
+    /* PROBLEM */
+    .problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+
+    .problem-card{
+      min-height:430px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      padding:24px;
+      border:1px solid var(--line);
+      border-radius:var(--radius-card);
+      background:#fff;
+      overflow:hidden;
+      position:relative;
+      box-shadow:0 12px 28px rgba(0,0,0,.035);
+    }
+
+    .problem-card:nth-child(1){background:linear-gradient(160deg,#FFFFFF,#F3F4F8)}
+    .problem-card:nth-child(2){background:linear-gradient(160deg,#FFFFFF,#F4F5EF)}
+
+    .problem-kicker{
+      display:flex;
+      justify-content:space-between;
+      gap:16px;
+      color:#74747A;
+      font-size:12px;
+      font-weight:700;
+    }
+
+    .problem-visual{
+      margin:26px 0 24px;
+      min-height:270px;
+      border-radius:14px;
+      border:1px solid rgba(17,17,19,.07);
+      background:#fff;
+      display:grid;
+      place-items:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .problem-photo{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .problem-card h3{
+      font-size:clamp(26px,2.8vw,36px);
+      line-height:1.12;
+      letter-spacing:-.035em;
+      font-weight:600;
+      max-width:620px;
+    }
+
+    .problem-card p{
+      margin-top:12px;
+      color:var(--muted);
+      max-width:560px;
+    }
+
+    /* SURVEY — Hero 바로 아래 */
+    .survey{
+      background:#F2F2F4;
+      border-top:1px solid var(--line);
+      border-bottom:1px solid var(--line);
+    }
+
+    .survey-shell{
+      display:grid;
+      grid-template-columns:minmax(260px,.64fr) minmax(0,1.36fr);
+      gap:clamp(34px,6vw,78px);
+      align-items:start;
+    }
+
+    .survey-intro{
+      position:sticky;
+      top:calc(var(--header-h) + 28px);
+    }
+
+    .survey-intro h2{
+      font-size:clamp(40px,4.8vw,64px);
+    }
+
+    .survey-intro p{
+      margin-top:18px;
+      color:var(--muted);
+      max-width:430px;
+    }
+
+    .survey-meta{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:26px;
+    }
+
+    .meta-chip{
+      padding:8px 10px;
+      border:1px solid var(--line-strong);
+      border-radius:999px;
+      background:rgba(255,255,255,.68);
+      color:var(--muted);
+      font-size:11px;
+      font-weight:700;
+    }
+
+    .survey-card{
+      min-width:0;
+      padding:clamp(20px,3vw,34px);
+      border:1px solid var(--line-strong);
+      border-radius:var(--radius-card);
+      background:#fff;
+      box-shadow:0 16px 36px rgba(0,0,0,.045);
+      overflow:hidden;
+    }
+
+    .survey-progress{
+      display:flex;
+      align-items:center;
+      gap:16px;
+      margin-bottom:28px;
+      color:var(--subtle);
+      font:700 12px/1 var(--font-en);
+    }
+
+    .progress-track{
+      flex:1;
+      height:5px;
+      border-radius:999px;
+      background:#EBEBEF;
+      overflow:hidden;
+    }
+
+    .progress-bar{
+      height:100%;
+      width:33.333%;
+      background:var(--cobalt);
+      border-radius:inherit;
+      transition:width .3s var(--ease);
+    }
+
+    #questionViewport{
+      position:relative;
+      overflow:hidden;
+      transition:height .34s var(--ease);
+    }
+
+    .survey-question{display:none}
+    .survey-question.active{display:block}
+
+    .survey-question h3{
+      font-size:clamp(27px,3.4vw,42px);
+      line-height:1.14;
+      letter-spacing:-.04em;
+      font-weight:600;
+    }
+
+    .survey-help{
+      margin-top:10px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    .option-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:9px;
+      margin-top:24px;
+    }
+
+    .option{
+      min-height:62px;
+      border:1px solid var(--line-strong);
+      border-radius:var(--radius-control);
+      background:#FCFCFD;
+      color:var(--text);
+      padding:14px 15px;
+      text-align:left;
+      font-weight:620;
+      transition:
+        background .2s var(--ease),
+        border-color .2s var(--ease),
+        box-shadow .2s var(--ease),
+        transform .18s var(--ease);
+    }
+
+    .option:hover{
+      border-color:rgba(63,127,224,.40);
+      background:#F5F8FE;
+    }
+
+    .option:active{transform:scale(.99)}
+
+    .option.selected{
+      border-color:var(--cobalt);
+      background:var(--surface-blue);
+      box-shadow:inset 0 0 0 1px var(--cobalt);
+    }
+
+    .option-check{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+    }
+
+    .option-check i{
+      font-size:16px;
+      color:var(--line-strong);
+      flex-shrink:0;
+    }
+
+    .option.selected .option-check i{color:var(--cobalt)}
+
+    .survey-actions{
+      display:flex;
+      justify-content:space-between;
+      gap:10px;
+      margin-top:28px;
+    }
+
+    .survey-msg{
+      min-height:22px;
+      margin-top:12px;
+      color:var(--danger);
+      font-size:13px;
+    }
+
+    .survey-success{display:none}
+    .survey-success.show{display:block}
+
+    .survey-success h3{
+      font-size:clamp(30px,4vw,44px);
+      line-height:1.1;
+      letter-spacing:-.04em;
+    }
+
+    .survey-success p{
+      margin-top:14px;
+      color:var(--muted);
+    }
+
+    .survey-summary{
+      margin-top:22px;
+      padding:16px;
+      border:1px solid var(--line);
+      border-radius:12px;
+      background:#F7F7F9;
+      display:grid;
+      gap:9px;
+    }
+
+    .summary-row{
+      display:grid;
+      grid-template-columns:110px 1fr;
+      gap:12px;
+      font-size:13px;
+    }
+
+    .summary-row span:first-child{color:var(--subtle)}
+
+    .hp{
+      position:absolute!important;
+      left:-9999px!important;
+      width:1px!important;
+      height:1px!important;
+      overflow:hidden!important;
+    }
+
+    /* HOW */
+    .how-panel{
+      padding:clamp(20px,3vw,34px);
+      border:1px solid var(--line);
+      border-radius:var(--radius-card);
+      background:linear-gradient(135deg,#EAF1FB,#F7F7F9 54%,#F0F2EA);
+      box-shadow:0 12px 28px rgba(0,0,0,.035);
+    }
+
+    .how-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:8px;
+    }
+
+    .how-step{
+      min-height:230px;
+      padding:20px;
+      border:1px solid rgba(17,17,19,.07);
+      border-radius:14px;
+      background:rgba(255,255,255,.94);
+      display:flex;
+      flex-direction:column;
+    }
+
+    .how-num{
+      color:var(--subtle);
+      font:700 11px/1 var(--font-en);
+      letter-spacing:.06em;
+    }
+
+    .how-icon{
+      width:44px;
+      height:44px;
+      margin-top:34px;
+      border-radius:12px;
+      display:grid;
+      place-items:center;
+      background:var(--surface-blue);
+      color:var(--cobalt);
+      font-weight:800;
+    }
+
+    .how-step:nth-child(3) .how-icon{background:#EEF6F0;color:var(--success)}
+    .how-step:nth-child(4) .how-icon{background:var(--surface-green);color:#677B2C}
+
+    .how-step h3{
+      margin-top:auto;
+      font-size:20px;
+      line-height:1.25;
+      letter-spacing:-.03em;
+    }
+
+    .how-step p{
+      margin-top:7px;
+      color:var(--muted);
+      font-size:13px;
+      line-height:1.5;
+    }
+
+    /* USE CASES */
+    .usecase-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:10px;
+    }
+
+    .usecase-card{
+      min-height:440px;
+      border:1px solid var(--line);
+      border-radius:var(--radius-card);
+      background:#fff;
+      padding:22px;
+      display:flex;
+      flex-direction:column;
+      box-shadow:0 12px 28px rgba(0,0,0,.03);
+    }
+
+    .usecase-card:nth-child(2){background:#F7F7F9}
+    .usecase-card:nth-child(3){background:#F4F5EE}
+
+    .usecase-top{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:12px;
+      color:var(--subtle);
+      font:700 11px/1 var(--font-en);
+    }
+
+    .status-pill{
+      display:inline-flex;
+      align-items:center;
+      gap:7px;
+      padding:8px 10px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:#fff;
+      color:var(--muted);
+      font-size:11px;
+      font-weight:700;
+    }
+
+    .status-pill i{
+      width:7px;
+      height:7px;
+      border-radius:50%;
+      background:var(--signal);
+    }
+
+    .usecase-visual{
+      min-height:300px;
+      height:300px;
+      align-items:stretch;
+      overflow:hidden;
+      border-radius:14px;
+      margin:18px 0 16px;
+    }
+
+    .usecase-photo{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .usecase-card h3{
+      font-size:clamp(26px,2.6vw,36px);
+      line-height:1.08;
+      letter-spacing:-.04em;
+      font-weight:600;
+    }
+
+    .usecase-card>p{
+      margin-top:12px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    /* TRUST */
+    .trust-grid{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:clamp(34px,6vw,84px);
+      align-items:start;
+    }
+
+    .trust-copy p{
+      margin-top:20px;
+      color:var(--muted);
+      max-width:560px;
+    }
+
+    .trust-list{border-top:1px solid var(--line-strong)}
+
+    .trust-item{
+      display:grid;
+      grid-template-columns:52px 1fr;
+      gap:18px;
+      padding:22px 0;
+      border-bottom:1px solid var(--line-strong);
+    }
+
+    .trust-index{
+      font:700 12px/1 var(--font-en);
+      color:var(--subtle);
+      padding-top:6px;
+    }
+
+    .trust-item h3{
+      font-size:22px;
+      line-height:1.25;
+      letter-spacing:-.03em;
+    }
+
+    .trust-item p{
+      margin-top:7px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    /* FAQ */
+    .faq-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:9px;
+    }
+
+    .faq-item{
+      border:1px solid var(--line);
+      border-radius:14px;
+      background:#fff;
+      padding:0 16px;
+      box-shadow:0 8px 20px rgba(0,0,0,.025);
+    }
+
+    .faq-question{
+      width:100%;
+      min-height:64px;
+      border:0;
+      background:transparent;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      text-align:left;
+      font-weight:650;
+      color:var(--text);
+    }
+
+    .faq-question b{
+      color:var(--subtle);
+      font-size:22px;
+      font-weight:500;
+      transition:transform .2s var(--ease);
+    }
+
+    .faq-item.open .faq-question b{transform:rotate(45deg)}
+
+    .faq-answer{
+      display:none;
+      padding:0 0 17px;
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.65;
+    }
+
+    .faq-item.open .faq-answer{display:block}
+
+    /* FINAL CTA */
+    .final-cta{padding:46px 0 clamp(92px,9vw,130px)}
+
+    .final-box{
+      display:grid;
+      grid-template-columns:minmax(0,1.2fr) minmax(260px,.8fr);
+      gap:34px;
+      align-items:end;
+      padding:clamp(28px,5vw,56px);
+      border:1px solid var(--line);
+      border-radius:var(--radius-media);
+      background:linear-gradient(135deg,#EAF1FB,#F7F7F9 56%,#EFF1E8);
+    }
+
+    .final-box h2{
+      font-size:clamp(40px,5.6vw,74px);
+      line-height:1.0;
+      letter-spacing:-.05em;
+      font-weight:620;
+      text-wrap:balance;
+    }
+
+    .final-side p{
+      color:var(--muted);
+      max-width:470px;
+      margin-bottom:22px;
+    }
+
+    /* FOOTER */
+    .footer{
+      border-top:1px solid var(--line);
+      padding:22px 0 34px;
+      color:var(--subtle);
+      font-size:12px;
+      background:#EFEFF1;
+    }
+
+    .footer-inner{
+      display:flex;
+      justify-content:space-between;
+      gap:18px;
+      align-items:center;
+    }
+
+    .footer-links{
+      display:flex;
+      gap:16px;
+    }
+
+    .footer-links a{
+      color:var(--subtle);
+      text-decoration:none;
+    }
+
+    .footer-links a:hover{color:var(--text)}
+
+    .mobile-sticky{display:none}
+
+    .reveal{
+      opacity:0;
+      transform:translateY(18px);
+      transition:opacity .65s var(--ease),transform .65s var(--ease);
+    }
+
+    .reveal.visible{
+      opacity:1;
+      transform:none;
+    }
+
+    @media(max-width:1000px){
+      .nav-links{display:none}
+
+      .survey-shell,
+      .trust-grid,
+      .final-box{
+        grid-template-columns:1fr;
+      }
+
+      .survey-intro{position:static}
+      .how-grid{grid-template-columns:1fr 1fr}
+      .usecase-grid{grid-template-columns:1fr}
+      .usecase-card{min-height:auto}
+    }
+
+    @media(max-width:767px){
+      :root{
+        --page-pad:clamp(16px,5vw,22px);
+        --header-h:56px;
+      }
+
+      .section{padding:58px 0 64px}
+
+      .nav{min-height:56px}
+      .brand{font-size:18px}
+      .nav .btn{display:none}
+
+      /* MOBILE HERO — 핵심 HTML과 동일한 4:5 + bottom scrim 방식 */
+      .hero{padding:16px 0 30px}
+
+      .hero-single{width:100%}
+
+      .hero-shell-embedded{
+        position:relative;
+        width:100%;
+        min-height:0;
+        aspect-ratio:4 / 5;
+        border-radius:18px;
+        overflow:hidden;
+      }
+
+      .hero-image-embedded{
+        object-fit:cover;
+        object-position:42% center;
+      }
+
+      .hero-embedded-veil{
+        background:linear-gradient(
+          180deg,
+          rgba(11,15,22,0) 0%,
+          rgba(11,15,22,0) 34%,
+          rgba(11,15,22,.24) 57%,
+          rgba(11,15,22,.70) 82%,
+          rgba(11,15,22,.86) 100%
+        );
+      }
+
+      .hero-embedded-overlay{
+        position:absolute;
+        inset:0;
+        width:100%;
+        height:100%;
+        min-height:0;
+        display:flex;
+        flex-direction:column;
+        justify-content:flex-end;
+        align-items:stretch;
+        padding:16px 15px 15px;
+      }
+
+      .hero-embedded-copy{
+        position:static;
+        width:100%;
+        max-width:none;
+        padding:0;
+        background:none;
+        border-radius:0;
+        backdrop-filter:none;
+        -webkit-backdrop-filter:none;
+      }
+
+      .hero-embedded-copy .eyebrow{display:none}
+
+      .hero .hero-embedded-copy h1{
+        width:100%;
+        max-width:100%;
+        margin:0;
+        color:#fff;
+        font-size:clamp(25px,7.1vw,33px);
+        line-height:1.07;
+        letter-spacing:-.025em;
+        font-weight:800;
+        text-align:left;
+        text-wrap:balance;
+        text-shadow:0 2px 14px rgba(0,0,0,.45);
+      }
+
+      .hero .hero-embedded-copy h1 .soft{
+        display:block;
+        margin-top:6px;
+        color:rgba(255,255,255,.90);
+        font-size:.62em;
+        line-height:1.15;
+        font-weight:650;
+        letter-spacing:-.01em;
+      }
+
+      .hero-risk-card{
+        width:100%;
+        margin:12px 0 0;
+        display:grid;
+        grid-template-columns:30px minmax(0,1fr);
+        gap:10px;
+        align-items:center;
+        padding:10px 12px;
+        border-radius:13px;
+        background:rgba(255,255,255,.94);
+        border:1px solid rgba(17,17,19,.08);
+        backdrop-filter:blur(10px);
+        -webkit-backdrop-filter:blur(10px);
+        box-shadow:0 8px 22px rgba(0,0,0,.18);
+      }
+
+      .hero-risk-card .risk-icon{
+        width:30px;
+        height:30px;
+        border-radius:8px;
+        font-size:14px;
+      }
+
+      .hero-risk-card strong{
+        display:block;
+        font-size:12px;
+        line-height:1.18;
+        letter-spacing:-.01em;
+      }
+
+      .hero-risk-card p{
+        margin-top:2px;
+        font-size:10.5px;
+        line-height:1.24;
+      }
+
+      .hero-actions-below{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:8px;
+        width:100%;
+        margin-top:14px;
+      }
+
+      .hero-actions-below .btn-primary{
+        width:100%;
+        min-height:48px;
+      }
+
+      .hero-actions-below .btn-secondary{display:none}
+
+      .hero-actions-below .hero-note{
+        width:100%;
+        margin:0;
+        text-align:center;
+        font-size:10.5px;
+        line-height:1.35;
+      }
+
+      .section-head{
+        grid-template-columns:1fr;
+        gap:14px;
+        margin-bottom:22px;
+      }
+
+      .section-head h2,
+      .survey-intro h2,
+      .trust-copy h2,
+      .faq-head h2{
+        font-size:clamp(33px,9vw,44px);
+      }
+
+      .section-head>p{justify-self:start}
+
+      .problem-grid{grid-template-columns:1fr}
+      .problem-card{min-height:0;padding:18px}
+      .problem-visual{min-height:230px;margin:20px 0}
+
+      #survey.section{padding:48px 0 54px}
+      #survey .survey-shell{gap:18px}
+
+      #survey .survey-intro h2{
+        margin-top:10px;
+        font-size:clamp(31px,8.5vw,39px);
+        line-height:1.05;
+      }
+
+      #survey .survey-intro p{
+        margin-top:10px;
+        font-size:13px;
+        line-height:1.48;
+      }
+
+      #survey .survey-meta{
+        gap:6px;
+        margin-top:12px;
+      }
+
+      #survey .meta-chip{
+        padding:6px 8px;
+        font-size:10px;
+      }
+
+      #survey .survey-card{
+        padding:14px 14px 12px;
+        border-radius:14px;
+      }
+
+      #survey .survey-progress{
+        gap:10px;
+        margin-bottom:14px;
+        font-size:10px;
+      }
+
+      #survey .progress-track{height:4px}
+
+      #survey .survey-question h3{
+        font-size:clamp(22px,6.2vw,28px);
+        line-height:1.15;
+        letter-spacing:-.035em;
+      }
+
+      #survey .survey-help{
+        margin-top:5px;
+        font-size:11.5px;
+        line-height:1.4;
+      }
+
+      #survey .option-grid{
+        grid-template-columns:1fr;
+        gap:7px;
+        margin-top:12px;
+      }
+
+      #survey .option{
+        min-height:44px;
+        padding:9px 10px;
+        border-radius:9px;
+        font-size:13px;
+        line-height:1.3;
+      }
+
+      #survey .survey-actions{margin-top:14px}
+
+      #survey .survey-actions .btn{
+        min-height:42px;
+        padding-inline:14px;
+        font-size:13px;
+      }
+
+      #survey .survey-msg{
+        min-height:16px;
+        margin-top:6px;
+        font-size:11px;
+        line-height:1.35;
+      }
+
+      #how.section{padding:56px 0 60px}
+      #how .section-head{margin-bottom:18px}
+
+      #how .section-head h2{
+        font-size:clamp(32px,8.7vw,40px);
+        line-height:1.05;
+      }
+
+      #how .section-head>p{
+        font-size:13px;
+        line-height:1.5;
+      }
+
+      #how .how-panel{
+        padding:8px;
+        border-radius:16px;
+      }
+
+      #how .how-grid{
+        display:block;
+        overflow:hidden;
+        border:1px solid rgba(17,17,19,.07);
+        border-radius:13px;
+        background:rgba(255,255,255,.94);
+      }
+
+      #how .how-step{
+        min-height:0;
+        padding:12px;
+        border:0;
+        border-radius:0;
+        background:transparent;
+        display:grid;
+        grid-template-columns:26px 38px minmax(0,1fr);
+        grid-template-areas:
+          "num icon title"
+          "num icon desc";
+        column-gap:10px;
+        row-gap:2px;
+        align-items:center;
+      }
+
+      #how .how-step + .how-step{border-top:1px solid var(--line)}
+
+      #how .how-num{
+        grid-area:num;
+        align-self:start;
+        padding-top:5px;
+        font-size:10px;
+      }
+
+      #how .how-icon{
+        grid-area:icon;
+        width:36px;
+        height:36px;
+        margin:0;
+        border-radius:10px;
+        font-size:13px;
+      }
+
+      #how .how-step h3{
+        grid-area:title;
+        margin:0;
+        font-size:16px;
+        line-height:1.28;
+        letter-spacing:-.025em;
+      }
+
+      #how .how-step p{
+        grid-area:desc;
+        margin:2px 0 0;
+        font-size:12px;
+        line-height:1.4;
+      }
+
+      #usecases.section{padding:56px 0 60px}
+      #usecases .section-head{gap:12px;margin-bottom:18px}
+
+      #usecases .section-head h2{
+        font-size:clamp(32px,8.7vw,40px);
+        line-height:1.05;
+      }
+
+      #usecases .usecase-grid{gap:8px}
+
+      #usecases .usecase-card{
+        min-height:0;
+        padding:14px 15px 15px;
+        border-radius:14px;
+      }
+
+      #usecases .usecase-top{font-size:10px}
+
+      #usecases .status-pill{
+        gap:5px;
+        padding:6px 8px;
+        font-size:10px;
+      }
+
+      #usecases .status-pill i{
+        width:6px;
+        height:6px;
+      }
+
+      #usecases .usecase-visual{
+        min-height:290px;
+        height:290px;
+        margin:12px 0 13px;
+      }
+
+      #usecases .usecase-card h3{
+        font-size:22px;
+        line-height:1.13;
+        letter-spacing:-.035em;
+      }
+
+      #usecases .usecase-card>p{
+        margin-top:7px;
+        font-size:12.5px;
+        line-height:1.43;
+      }
+
+      .summary-row{grid-template-columns:90px 1fr}
+      .faq-grid{grid-template-columns:1fr}
+
+      .final-box{padding:22px}
+
+      .final-box h2{
+        font-size:clamp(34px,10vw,46px);
+      }
+
+      .footer{
+        padding-bottom:calc(96px + env(safe-area-inset-bottom));
+      }
+
+      .footer-inner{display:grid}
+
+      .mobile-sticky{
+        position:fixed;
+        left:12px;
+        right:12px;
+        bottom:calc(10px + env(safe-area-inset-bottom));
+        z-index:45;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        gap:10px;
+        padding:6px 6px 6px 13px;
+        border:1px solid rgba(17,17,19,.09);
+        border-radius:14px;
+        background:rgba(255,255,255,.92);
+        backdrop-filter:blur(16px);
+        box-shadow:0 14px 38px rgba(0,0,0,.10);
+        transform:translateY(140%);
+        transition:transform .3s var(--ease);
+      }
+
+      .mobile-sticky.show{transform:none}
+
+      .mobile-sticky small{
+        color:var(--muted);
+        font-size:11px;
+        font-weight:650;
+        line-height:1.35;
+        max-width:150px;
+      }
+
+      .mobile-sticky .btn{
+        min-height:42px;
+        padding-inline:14px;
+        font-size:12px;
+      }
+    }
+
+    @media(max-width:767px) and (orientation:landscape){
+      .hero-shell-embedded{aspect-ratio:16 / 9}
+      .hero-image-embedded{object-position:center 38%}
+      .hero .hero-embedded-copy h1{font-size:clamp(22px,5vw,30px)}
+    }
+
+    @media(max-width:380px){
+      .hero-embedded-overlay{padding:14px 13px 13px}
+      .hero .hero-embedded-copy h1{font-size:clamp(23px,7.3vw,30px)}
+      .hero-risk-card strong{font-size:11.5px}
+      .hero-risk-card p{font-size:10px}
+
+      #how .how-step{
+        grid-template-columns:23px 34px minmax(0,1fr);
+        padding:11px;
+        column-gap:8px;
+      }
+
+      #how .how-icon{
+        width:34px;
+        height:34px;
+      }
+
+      #how .how-step h3{font-size:15px}
+      #survey .survey-card{padding:13px 12px}
+      #survey .option{padding:8px 9px;font-size:12.5px}
+      #usecases .usecase-card h3{font-size:21px}
+    }
+
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      *,*::before,*::after{
+        animation-duration:.01ms!important;
+        animation-iteration-count:1!important;
+        transition-duration:.01ms!important;
+      }
+      .reveal{opacity:1;transform:none}
+    }
+  </style>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="CALL X home">
+        CALL <span class="accent">X</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#survey" data-i18n="navSurvey"></a>
+        <a href="#how" data-i18n="navHow"></a>
+        <a href="#usecases" data-i18n="navCases"></a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="btn btn-primary" href="#survey" data-i18n="navCta"></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============================================================
+         HERO — 핵심 HTML과 동일한 단일 이미지 카드 구조
+         ============================================================ -->
+    <section class="hero">
+      <div class="container hero-single reveal">
+        <div class="hero-shell-embedded" aria-label="Illustration CALL X Fact Check">
+          <img
+            class="hero-image-embedded"
+            src="assets/factcheck-hero-fr.jpg"
+            alt="Une femme travaille pendant que l'IA vérifie les informations d'un appel à sa place"
+            fetchpriority="high"
+            decoding="async"
+          />
+
+          <div class="hero-embedded-veil"></div>
+
+          <div class="hero-embedded-overlay">
+            <div class="hero-embedded-copy">
+              <div class="eyebrow" data-i18n="heroEyebrow"></div>
+
+              <h1>
+                <span data-i18n="heroTitle1"></span>
+                <span class="soft" data-i18n="heroTitle2"></span>
+              </h1>
+
+              <div class="hero-risk-card">
+                <div class="risk-icon">
+                  <i class="ic">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round">
+                      <circle cx="12" cy="12" r="9"/>
+                      <path d="M9 12l2 2l4-4"/>
+                    </svg>
+                  </i>
+                </div>
+
+                <div>
+                  <strong data-i18n="riskToastTitle"></strong>
+                  <p data-i18n="riskToastBody"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-actions hero-actions-below">
+          <a class="btn btn-primary" href="#survey" data-i18n="heroCta"></a>
+          <a class="btn btn-secondary" href="#how" data-i18n="heroSecondary"></a>
+          <p class="hero-note" data-i18n="heroNote"></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SURVEY — 핵심 HTML과 동일하게 Hero 바로 아래
+         ============================================================ -->
+    <section class="section survey" id="survey">
+      <div class="container survey-shell">
+        <div class="survey-intro reveal">
+          <div class="eyebrow" data-i18n="surveyEyebrow"></div>
+          <h2 data-i18n="surveyTitle"></h2>
+          <p data-i18n="surveyDesc"></p>
+
+          <div class="survey-meta">
+            <span class="meta-chip" data-i18n="surveyMeta1"></span>
+            <span class="meta-chip" data-i18n="surveyMeta2"></span>
+            <span class="meta-chip" data-i18n="surveyMeta3"></span>
+          </div>
+        </div>
+
+        <div class="survey-card reveal">
+          <form id="surveyForm" novalidate>
+            <label class="hp" aria-hidden="true">
+              Website
+              <input
+                type="text"
+                id="website"
+                name="website"
+                autocomplete="off"
+                tabindex="-1"
+              />
+            </label>
+
+            <div class="survey-progress">
+              <span id="progressText">1 / 1</span>
+              <div class="progress-track">
+                <div class="progress-bar" id="progressBar"></div>
+              </div>
+            </div>
+
+            <div id="questionViewport">
+              <div id="questionWrap"></div>
+            </div>
+
+            <div class="survey-actions" id="surveyActions">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                id="prevBtn"
+                disabled
+                data-i18n="prev">
+              </button>
+
+              <button
+                type="button"
+                class="btn btn-primary"
+                id="nextBtn"
+                data-i18n="next">
+              </button>
+            </div>
+
+            <p class="survey-msg" id="surveyMsg" role="alert"></p>
+          </form>
+
+          <div class="survey-success" id="surveySuccess">
+            <h3 data-i18n="successTitle"></h3>
+            <p id="successBody" data-i18n="successBody"></p>
+            <div class="survey-summary" id="surveySummary"></div>
+
+            <div style="margin-top:20px">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                id="resetSurvey"
+                data-i18n="reset">
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="section" id="problem">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow" data-i18n="problemEyebrow"></div>
+            <h2 data-i18n="problemTitle"></h2>
+          </div>
+          <p data-i18n="problemDesc"></p>
+        </div>
+
+        <div class="problem-grid">
+          <article class="problem-card reveal">
+            <div class="problem-kicker">
+              <span data-i18n="problem1Kicker"></span>
+              <span data-i18n="problem1State"></span>
+            </div>
+
+            <div class="problem-visual">
+              <img
+                class="problem-photo"
+                src="assets/problem-1.png"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+
+            <div>
+              <h3 data-i18n="problem1Title"></h3>
+              <p data-i18n="problem1Desc"></p>
+            </div>
+          </article>
+
+          <article class="problem-card reveal">
+            <div class="problem-kicker">
+              <span data-i18n="problem2Kicker"></span>
+              <span data-i18n="problem2State"></span>
+            </div>
+
+            <div class="problem-visual">
+              <img
+                class="problem-photo"
+                src="assets/problem-2.png"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+
+            <div>
+              <h3 data-i18n="problem2Title"></h3>
+              <p data-i18n="problem2Desc"></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW -->
+    <section class="section section-soft" id="how">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="eyebrow" data-i18n="howEyebrow"></div>
+            <h2 data-i18n="howTitle"></h2>
+          </div>
+          <p data-i18n="howDesc"></p>
+        </div>
+
+        <div class="how-panel">
+          <div class="how-grid">
+            <article class="how-step reveal">
+              <span class="how-num">01</span>
+              <div class="how-icon">☎</div>
+              <h3 data-i18n="how1Title"></h3>
+              <p data-i18n="how1Desc"></p>
+            </article>
+
+            <article class="how-step reveal">
+              <span class="how-num">02</span>
+              <div class="how-icon">◎</div>
+              <h3 data-i18n="how2Title"></h3>
+              <p data-i18n="how2Desc"></p>
+            </article>
+
+            <article class="how-step reveal">
+              <span class="how-num">03</span>
+              <div class="how-icon">✓</div>
+              <h3 data-i18n="how3Title"></h3>
+              <p data-i18n="how3Desc"></p>
+            </article>
+
+            <article class="how-step reveal">
+              <span class="how-num">04</span>
+              <div class="how-icon">+</div>
+              <h3 data-i18n="how4Title"></h3>
+              <p data-i18n="how4Desc"></p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- USE CASES -->
+    <section class="section" id="usecases">
+      <div class="container">
+        <div class="section-head" style="grid-template-columns:1fr">
+          <div>
+            <div class="eyebrow" data-i18n="casesEyebrow"></div>
+            <h2 data-i18n="casesTitle"></h2>
+          </div>
+        </div>
+
+        <div class="usecase-grid">
+          <article class="usecase-card reveal">
+            <div class="usecase-top">
+              <span>01</span>
+              <span class="status-pill">
+                <i></i>
+                <span data-i18n="case1Pill"></span>
+              </span>
+            </div>
+
+            <div class="usecase-visual">
+              <img
+                class="usecase-photo"
+                src="assets/usecase-1.png"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+
+            <h3 data-i18n="case1Title"></h3>
+            <p data-i18n="case1Desc"></p>
+          </article>
+
+          <article class="usecase-card reveal">
+            <div class="usecase-top">
+              <span>02</span>
+              <span class="status-pill">
+                <i></i>
+                <span data-i18n="case2Pill"></span>
+              </span>
+            </div>
+
+            <div class="usecase-visual">
+              <img
+                class="usecase-photo"
+                src="assets/usecase-2.png"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+
+            <h3 data-i18n="case2Title"></h3>
+            <p data-i18n="case2Desc"></p>
+          </article>
+
+          <article class="usecase-card reveal">
+            <div class="usecase-top">
+              <span>03</span>
+              <span class="status-pill">
+                <i></i>
+                <span data-i18n="case3Pill"></span>
+              </span>
+            </div>
+
+            <div class="usecase-visual">
+              <img
+                class="usecase-photo"
+                src="assets/usecase-3.png"
+                alt=""
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+
+            <h3 data-i18n="case3Title"></h3>
+            <p data-i18n="case3Desc"></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST -->
+    <section class="section section-soft" id="trust">
+      <div class="container trust-grid">
+        <div class="trust-copy reveal">
+          <div class="eyebrow" data-i18n="trustEyebrow"></div>
+          <h2 data-i18n="trustTitle"></h2>
+          <p data-i18n="trustDesc"></p>
+        </div>
+
+        <div class="trust-list">
+          <article class="trust-item reveal">
+            <span class="trust-index">01</span>
+            <div>
+              <h3 data-i18n="trust1Title"></h3>
+              <p data-i18n="trust1Desc"></p>
+            </div>
+          </article>
+
+          <article class="trust-item reveal">
+            <span class="trust-index">02</span>
+            <div>
+              <h3 data-i18n="trust2Title"></h3>
+              <p data-i18n="trust2Desc"></p>
+            </div>
+          </article>
+
+          <article class="trust-item reveal">
+            <span class="trust-index">03</span>
+            <div>
+              <h3 data-i18n="trust3Title"></h3>
+              <p data-i18n="trust3Desc"></p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="faq-head">
+          <div class="eyebrow">FAQ</div>
+          <h2 data-i18n="faqTitle"></h2>
+        </div>
+
+        <div class="faq-grid" style="margin-top:28px">
+          <div class="faq-item open">
+            <button class="faq-question" type="button">
+              <span data-i18n="faq1Q"></span>
+              <b>+</b>
+            </button>
+            <div class="faq-answer" data-i18n="faq1A"></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span data-i18n="faq2Q"></span>
+              <b>+</b>
+            </button>
+            <div class="faq-answer" data-i18n="faq2A"></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span data-i18n="faq3Q"></span>
+              <b>+</b>
+            </button>
+            <div class="faq-answer" data-i18n="faq3A"></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" type="button">
+              <span data-i18n="faq4Q"></span>
+              <b>+</b>
+            </button>
+            <div class="faq-answer" data-i18n="faq4A"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta" id="final">
+      <div class="container">
+        <div class="final-box">
+          <div class="reveal">
+            <div class="eyebrow">CALL X</div>
+            <h2 data-i18n="finalTitle"></h2>
+          </div>
+
+          <div class="final-side reveal">
+            <p data-i18n="finalDesc"></p>
+            <a class="btn btn-primary" href="#survey" data-i18n="finalCta"></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© 2026 CALL X Inc.</span>
+
+      <nav class="footer-links">
+        <a href="https://callx-legal.vercel.app/privacy.html">
+          Politique de confidentialité
+        </a>
+        <a href="https://callx-legal.vercel.app/terms.html">
+          CGU
+        </a>
+      </nav>
+    </div>
+  </footer>
+
+  <div class="mobile-sticky" id="mobileSticky" aria-hidden="true">
+    <small data-i18n="stickyText"></small>
+    <a class="btn btn-primary" href="#survey" data-i18n="stickyCta"></a>
+  </div>
+
+  <script>
+  (() => {
+    'use strict';
+
+    /* ============================================================================
+       [1] I18N 딕셔너리
+       ============================================================================ */
+    const I18N = {
+      ko: {
+        metaTitle:'AI 팩트체크 전화 대신받기 — 내용이 맞는지 더는 헷갈리지 않아요',
+        metaDescription:'AI가 보험·카드·통신 전화를 대신 받고, 금액과 조건을 확인해서 알려드려요.',
+        navHow:'이용 흐름', navSurvey:'설문 참여', navCases:'사용 장면', navCta:'사전 신청',
+
+        heroEyebrow:'AI 팩트체크 대신받기',
+        heroTitle1:'귀찮은 광고·정보성 전화,',
+        heroTitle2:'일일이 따져보지 않아도 돼요',
+        heroDesc:'AI가 대신 확인해서 나에게 맞는 혜택인지 알려드려요.',
+        heroCta:'사전 신청하기', heroSecondary:'이용 흐름 보기',
+        heroNote:'무료로 사전 신청하고 출시 소식을 가장 먼저 받아보세요',
+        zero1:'실시간 확인', zero2:'임의 판단 없음', zero3:'30초면 설정 끝',
+        riskToastTitle:'혜택 확인 완료',
+        riskToastBody:'보험료 안내 전화, AI가 나에게 맞는지 확인했어요',
+        riskToastState:'실시간 확인 중',
+
+        problemEyebrow:'왜 필요한가요',
+        problemTitle:'정보성 전화, 받는 것도 무시하는 것도 부담이에요',
+        problemDesc:'확인이 필요한 전화는 매번 직접 응대하고, 통화 후에도 내용을 다시 확인해야 하죠.',
+        problem1Kicker:'문제 01', problem1State:'매번 반복',
+        problem1Title:'들은 금액·조건이 맞는지 다시 확인해야 하는 번거로움',
+        problem1Desc:'보험료, 카드 혜택, 대출 조건... 전화로 들은 내용이 정확한지 매번 따로 알아봐야 해요.',
+        problem2Kicker:'문제 02', problem2State:'시간 소모',
+        problem2Title:'모두 받기도, 모두 무시하기도 어려운 정보성 전화',
+        problem2Desc:'중요한 안내일 수도 있어서 무시하기 어렵고, 다 받자니 시간과 집중력이 소모돼요.',
+
+        howEyebrow:'이용 흐름',
+        howTitle:'AI가 대신 받고, 팩트체크까지 해드려요',
+        howDesc:'설정은 한 번만, 이후엔 AI가 알아서 확인해요.',
+        how1Title:'대신 받을 조건 설정',
+        how1Desc:'시간대와 전화 조건을 미리 설정해두세요.',
+        how2Title:'AI가 대신 응대',
+        how2Desc:'조건에 맞는 전화가 오면 AI가 대신 받아요.',
+        how3Title:'금액·조건 확인',
+        how3Desc:'통화 중 언급된 주요 정보를 AI가 확인해요.',
+        how4Title:'결과 요약 전달',
+        how4Desc:'팩트체크 결과와 통화 내용을 요약해서 알려드려요.',
+
+        surveyEyebrow:'30초면 끝나요',
+        surveyTitle:'나에게 맞는 팩트체크, 미리 설정해보세요',
+        surveyDesc:'실제로 사용할 것처럼 골라주시면, 그대로 준비해드릴게요.',
+        surveyMeta1:'약 30초 소요',
+        surveyMeta2:'개인정보 수집 없음',
+        surveyMeta3:'가입 없이 바로',
+
+        prev:'이전',
+        next:'다음',
+        submit:'응답 보내기',
+        sending:'저장 중…',
+        needAnswer:'답변을 하나 이상 선택해주세요.',
+        saveError:'응답을 저장하지 못했습니다. 잠시 후 다시 시도해주세요.',
+        successTitle:'응답이 저장되었습니다.',
+        successBody:'사전 신청 명단에 등록되었어요. 출시 소식을 가장 먼저 알려드릴게요.',
+        localSuccessTitle:'미리보기 응답을 확인했습니다.',
+        localSuccessBody:'현재는 로컬 미리보기라 서버에는 저장되지 않았습니다.',
+        reset:'다시 응답하기',
+
+        casesEyebrow:'사용 장면',
+        casesTitle:'이럴 때 AI가 대신 확인해요',
+        casesDesc:'실제로 자주 겪는 상황이에요',
+        case1Pill:'보험 전화',
+        case1Actor1:'보험사',
+        case1Actor2:'나',
+        case1Badge:'조건 확인',
+        case1Caption:'보장·갱신 안내',
+        case1Result:'조건 확인 완료',
+        case1Title:'보험료·보장 조건을 안내하는 전화가 왔을 때',
+        case1Desc:'AI가 통화 중 언급된 보장 범위와 조건을 확인해서 알려드려요.',
+        case2Pill:'금융 전화',
+        case2Badge:'정보 확인 중',
+        case2Actor1:'AI',
+        case2Result:'확인 결과 전달',
+        case2Sub:'혜택·금리 조건 확인 완료',
+        case2Title:'카드 혜택이나 대출 조건을 안내하는 전화',
+        case2Desc:'AI가 대신 받아서 안내된 조건이 맞는지 확인해드려요.',
+        case3Pill:'통신 전화',
+        case3Eyebrow:'통신·구독 안내',
+        case3Alert:'요금제 변경 안내 수신',
+        case3AlertSub:'AI가 확인 중',
+        case3Enter:'AI가 대신 확인',
+        case3Conf:'확인 완료',
+        case3P1:'통신사',
+        case3P2:'AI',
+        case3P3:'나',
+        case3Title:'요금제·약정 안내 전화가 왔을 때',
+        case3Desc:'AI가 확인한 결과를 나에게 요약해서 전달해요.',
+
+        trustEyebrow:'신뢰 포인트',
+        trustTitle:'확인할 수 있는 것만, 정직하게 확인해요',
+        trustDesc:'AI가 임의로 판단하지 않고, 확인 가능한 근거를 기준으로만 답해요.',
+        trust1Title:'확인 가능한 정보 중심으로 검증',
+        trust1Desc:'공식 정보 등 확인 가능한 근거를 기준으로 팩트체크해요.',
+        trust2Title:'확인 여부를 명확히 구분',
+        trust2Desc:'확인된 정보와 추가 확인이 필요한 정보를 구분해서 알려드려요.',
+        trust3Title:'중요한 결정은 대신하지 않아요',
+        trust3Desc:'가입·계약·동의 같은 중요한 결정은 AI가 대신 수행하지 않고 사용자에게 전달해요.',
+
+        faqTitle:'자주 묻는 질문',
+        faq1Q:'통화 내용을 AI가 다 듣고 저장하나요?',
+        faq1A:'확인이 필요한 순간의 핵심 정보만 처리하며, 통화 전체를 상시 저장하지 않아요.',
+        faq2Q:'잘못된 정보로 안내하면 어떻게 되나요?',
+        faq2A:'확인이 어려운 내용은 임의로 답하지 않고, 확인이 필요하다고 명확히 안내해요.',
+        faq3Q:'지금 바로 쓸 수 있나요?',
+        faq3A:'현재는 사전 신청을 받고 있으며, 출시되면 가장 먼저 안내드려요.',
+        faq4Q:'비용이 드나요?',
+        faq4A:'기본 기능은 무료로 제공될 예정이며, 자세한 내용은 출시 시 안내드려요.',
+
+        finalTitle:'더는 헷갈리지 않아도 돼요',
+        finalDesc:'AI 팩트체크 대신받기, 지금 사전 신청하세요.',
+        finalCta:'사전 신청하기',
+        stickyText:'AI가 대신 확인해드려요',
+        stickyCta:'신청하기'
+      },
+
+      fr: {
+        metaTitle:"Vérification IA des appels — assurance, banque : ne doutez plus",
+        metaDescription:"L'IA répond à votre place aux appels d'assurance, de carte bancaire ou d'opérateur, et vérifie les montants et conditions annoncés.",
+        navHow:'Comment ça marche',
+        navSurvey:'Sondage',
+        navCases:"Cas d'usage",
+        navCta:'Donner mon avis',
+
+        heroEyebrow:'Vérification IA des appels',
+        heroTitle1:"Assurance, banque : des appels compliqués,",
+        heroTitle2:'ne doutez plus de ce qui est vrai',
+        heroDesc:"L'IA répond à votre place et vérifie les montants et conditions annoncés.",
+        heroCta:'Donner mon avis',
+        heroSecondary:'Voir comment ça marche',
+        heroNote:'Inscription gratuite — soyez informé·e en premier au lancement',
+        zero1:'Vérification en temps réel',
+        zero2:'Aucune décision arbitraire',
+        zero3:'Prêt en 30 secondes',
+        riskToastTitle:'Montant vérifié',
+        riskToastBody:"Appel d'assurance : l'IA a vérifié les conditions",
+        riskToastState:'Vérification en cours',
+
+        problemEyebrow:'Pourquoi ce service',
+        problemTitle:"Les appels d'information : ni à prendre, ni à ignorer sereinement",
+        problemDesc:"Les appels qui demandent une vérification vous obligent à répondre vous-même, puis à revérifier après coup.",
+        problem1Kicker:'Problème 01',
+        problem1State:'À chaque fois',
+        problem1Title:'Revérifier si le montant ou les conditions annoncées sont exacts',
+        problem1Desc:"Assurance, avantages carte, conditions de prêt... il faut souvent revérifier ce qu'on vous a annoncé au téléphone.",
+        problem2Kicker:'Problème 02',
+        problem2State:'Perte de temps',
+        problem2Title:"Difficile de tout prendre, difficile de tout ignorer",
+        problem2Desc:"Ça pourrait être important, donc difficile à ignorer — mais tout prendre coûte du temps et de l'attention.",
+
+        howEyebrow:'Comment ça marche',
+        howTitle:"L'IA répond à votre place et vérifie les faits",
+        howDesc:'Un seul réglage suffit, ensuite l’IA s’occupe du reste.',
+        how1Title:'Définissez vos conditions',
+        how1Desc:'Réglez à l’avance les horaires et types d’appels concernés.',
+        how2Title:"L'IA répond à votre place",
+        how2Desc:"Quand un appel correspond à vos critères, l'IA répond.",
+        how3Title:'Vérification des faits',
+        how3Desc:"L'IA vérifie les informations importantes mentionnées pendant l'appel.",
+        how4Title:'Résumé transmis',
+        how4Desc:'Le résultat de la vérification et le résumé de l’appel vous sont transmis.',
+
+        surveyEyebrow:'Sondage rapide',
+        surveyTitle:'Configurez votre vérification IA',
+        surveyDesc:'Choisissez comme si vous alliez vraiment l’utiliser — cela nous aide à mieux préparer le service.',
+        surveyMeta1:'Environ 30 secondes',
+        surveyMeta2:'Aucune donnée personnelle collectée',
+        surveyMeta3:'Question à choix multiples incluse',
+
+        prev:'Précédent',
+        next:'Suivant',
+        submit:'Envoyer mes réponses',
+        sending:'Enregistrement…',
+        needAnswer:'Veuillez sélectionner au moins une réponse.',
+        saveError:"Impossible d'enregistrer votre réponse. Veuillez réessayer.",
+        successTitle:'Votre réponse a bien été enregistrée.',
+        successBody:'Vous êtes inscrit·e sur la liste — vous serez informé·e en premier au lancement.',
+        localSuccessTitle:'Réponse validée en aperçu.',
+        localSuccessBody:"Vous êtes en aperçu local : la réponse n'a pas été enregistrée.",
+        reset:'Répondre à nouveau',
+
+        casesEyebrow:"Cas d'usage",
+        casesTitle:"Voici quand l'IA vérifie pour vous",
+        casesDesc:'Des situations fréquentes',
+        case1Pill:'Appel assurance',
+        case1Actor1:'Assureur',
+        case1Actor2:'Moi',
+        case1Badge:'Vérification',
+        case1Caption:'Garantie / renouvellement',
+        case1Result:'Conditions vérifiées',
+        case1Title:'Un appel sur le tarif ou les garanties de votre assurance',
+        case1Desc:"L'IA vérifie la couverture et les conditions mentionnées pendant l'appel.",
+        case2Pill:'Appel banque',
+        case2Badge:'Vérification en cours',
+        case2Actor1:'IA',
+        case2Result:'Résultat transmis',
+        case2Sub:'Avantages et taux vérifiés',
+        case2Title:'Un appel sur les avantages carte ou les conditions de prêt',
+        case2Desc:"L'IA répond à votre place et vérifie si les conditions annoncées sont exactes.",
+        case3Pill:'Appel opérateur',
+        case3Eyebrow:'Forfait / abonnement',
+        case3Alert:'Appel sur un changement de forfait',
+        case3AlertSub:"L'IA vérifie",
+        case3Enter:'Vérification par l’IA',
+        case3Conf:'Vérifié',
+        case3P1:'Opérateur',
+        case3P2:'IA',
+        case3P3:'Moi',
+        case3Title:'Un appel sur un changement de forfait ou d’engagement',
+        case3Desc:"L'IA vous transmet un résumé clair du résultat de la vérification.",
+
+        trustEyebrow:'Nos garanties',
+        trustTitle:"Seulement ce qui peut être vérifié, en toute transparence",
+        trustDesc:"L'IA ne décide jamais de façon arbitraire et ne répond que sur la base d'informations vérifiables.",
+        trust1Title:'Vérification basée sur des sources fiables',
+        trust1Desc:"L'IA vérifie les faits à partir de sources officielles et vérifiables.",
+        trust2Title:'Distinction claire vérifié / à vérifier',
+        trust2Desc:'Les informations confirmées et celles à vérifier davantage sont clairement séparées.',
+        trust3Title:'Les décisions importantes restent les vôtres',
+        trust3Desc:"Souscription, contrat, consentement : l'IA ne décide jamais à votre place, elle vous transmet l'information.",
+
+        faqTitle:'Questions fréquentes',
+        faq1Q:"L'IA écoute et enregistre tout l'appel ?",
+        faq1A:"Seules les informations clés nécessaires à la vérification sont traitées ; l'appel entier n'est pas enregistré en continu.",
+        faq2Q:'Que se passe-t-il en cas d’information incertaine ?',
+        faq2A:"Si une information ne peut pas être vérifiée, l'IA ne répond pas au hasard et l'indique clairement.",
+        faq3Q:'Puis-je l’utiliser dès maintenant ?',
+        faq3A:'Le service est en pré-inscription — vous serez informé·e en premier au lancement.',
+        faq4Q:'Est-ce payant ?',
+        faq4A:'Les fonctionnalités de base seront gratuites ; les détails seront communiqués au lancement.',
+
+        finalTitle:'Ne doutez plus de ce qui est vrai',
+        finalDesc:"Vérification IA des appels — inscrivez-vous dès maintenant.",
+        finalCta:'Donner mon avis',
+        stickyText:"L'IA vérifie pour vous",
+        stickyCta:'Donner mon avis'
+      }
+    };
+
+    /* ============================================================================
+       [2] SURVEY CONFIG
+       - what_to_check: 복수 선택
+       - channel: 단일 선택
+       - age_group: 단일 선택
+       ============================================================================ */
+    const SURVEY = [
+      {
+        id:'what_to_check',
+        layout:'grid',
+        multi:true,
+        title:{
+          ko:'AI가 어떤 통화를 확인해주면 좋을까요?',
+          fr:"Quels types d'appels aimeriez-vous que l'IA vérifie pour vous ? (plusieurs choix possibles)"
+        },
+        help:{
+          ko:'해당하는 것을 모두 선택할 수 있어요',
+          fr:'Vous pouvez sélectionner plusieurs options'
+        },
+        options:[
+          { value:'insurance', label:{ ko:'보험', fr:'Assurance' } },
+          { value:'finance', label:{ ko:'카드·금융상품', fr:'Carte / produits financiers' } },
+          { value:'telecom', label:{ ko:'통신·구독', fr:'Opérateur / abonnement' } },
+          { value:'sales', label:{ ko:'상품·서비스 판매 권유', fr:'Démarchage produit / service' } },
+          { value:'contract', label:{ ko:'계약·결제', fr:'Contrat / paiement' } },
+          { value:'official', label:{ ko:'공공기관·기업 중요 안내', fr:'Organisme public / entreprise' } },
+          { value:'other', label:{ ko:'기타', fr:'Autre' } }
+        ]
+      },
+
+      {
+        id:'channel',
+        layout:'grid',
+        multi:false,
+        title:{
+          ko:'결과를 어떤 채널로 받고 싶으신가요?',
+          fr:'Comment souhaitez-vous recevoir le résultat de la vérification ?'
+        },
+        help:{ ko:'', fr:'' },
+        options:[
+          { value:'sms', label:{ ko:'문자(SMS)', fr:'SMS' } },
+          { value:'email', label:{ ko:'이메일', fr:'E-mail' } },
+          { value:'whatsapp', label:{ ko:'왓츠앱', fr:'WhatsApp' } },
+          { value:'app', label:{ ko:'앱 알림', fr:"Notification dans l'application" } }
+        ]
+      },
+
+      {
+        id:'age_group',
+        layout:'grid',
+        multi:false,
+        title:{
+          ko:'연령대를 선택해주세요',
+          fr:'Quelle est votre tranche d’âge ?'
+        },
+        help:{ ko:'', fr:'' },
+        options:[
+          { value:'10s', label:{ ko:'10대', fr:'10-19 ans' } },
+          { value:'20s', label:{ ko:'20대', fr:'20-29 ans' } },
+          { value:'30s', label:{ ko:'30대', fr:'30-39 ans' } },
+          { value:'40s', label:{ ko:'40대', fr:'40-49 ans' } },
+          { value:'50s', label:{ ko:'50대', fr:'50-59 ans' } },
+          { value:'60s', label:{ ko:'60대', fr:'60-69 ans' } },
+          { value:'70s_plus', label:{ ko:'70대 이상', fr:'70 ans et plus' } }
+        ]
+      }
+    ];
+
+    const state = {
+      lang:'fr',
+      current:0,
+      answers:{},
+      submitted:false
+    };
+
+    const $  = (s,r=document)=>r.querySelector(s);
+    const $$ = (s,r=document)=>[...r.querySelectorAll(s)];
+
+    const getInitialLang = () => 'fr';
+    const t = key => (I18N[state.lang][key] || I18N.ko[key] || key);
+    const tf = obj => (obj?.[state.lang] || obj?.ko || '');
+
+    function getQuestions(){
+      return SURVEY.filter(q => !q.only || q.only.includes(state.lang));
+    }
+
+    function applyLanguage(lang){
+      const prevQuestions = getQuestions();
+      const prevId = prevQuestions[state.current]?.id;
+
+      state.lang = lang;
+      document.documentElement.lang = lang;
+      localStorage.setItem('landing_lang', lang);
+
+      $$('[data-i18n]').forEach(el=>{
+        const key = el.dataset.i18n;
+        const val = I18N[lang][key];
+        el.textContent =
+          (val!==undefined && val!=='')
+            ? val
+            : (I18N.ko[key]||'');
+      });
+
+      document.title = t('metaTitle') || document.title;
+
+      const meta = $('meta[name="description"]');
+      if(meta && t('metaDescription')){
+        meta.setAttribute('content', t('metaDescription'));
+      }
+
+      const newQuestions = getQuestions();
+      const matched = newQuestions.findIndex(q=>q.id===prevId);
+      state.current =
+        matched>=0
+          ? matched
+          : Math.min(state.current, newQuestions.length-1);
+
+      if(state.submitted) renderSummary();
+      else renderSurvey();
+    }
+
+    /* Reveal */
+    const reveals = $$('.reveal');
+
+    if('IntersectionObserver' in window){
+      const ro = new IntersectionObserver((es,obs)=>es.forEach(e=>{
+        if(e.isIntersecting){
+          e.target.classList.add('visible');
+          obs.unobserve(e.target);
+        }
+      }), {
+        threshold:.12,
+        rootMargin:'0px 0px -32px 0px'
+      });
+
+      reveals.forEach(el=>ro.observe(el));
+    }else{
+      reveals.forEach(el=>el.classList.add('visible'));
+    }
+
+    /* FAQ */
+    $$('.faq-question').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        btn.closest('.faq-item')?.classList.toggle('open');
+      });
+    });
+
+    /* Survey */
+    const questionWrap = $('#questionWrap');
+    const progressText = $('#progressText');
+    const progressBar = $('#progressBar');
+    const prevBtn = $('#prevBtn');
+    const nextBtn = $('#nextBtn');
+    const msg = $('#surveyMsg');
+    const form = $('#surveyForm');
+    const success = $('#surveySuccess');
+
+    function total(){
+      return getQuestions().length;
+    }
+
+    function renderSurvey(){
+      const questions = getQuestions();
+      const q = questions[state.current];
+
+      if(!q){
+        questionWrap.innerHTML='';
+        return;
+      }
+
+      if(q.multi && !Array.isArray(state.answers[q.id])){
+        state.answers[q.id] = [];
+      }
+
+      const opts = q.options.map(o=>{
+        const isSelected = q.multi
+          ? (state.answers[q.id]||[]).includes(o.value)
+          : state.answers[q.id]===o.value;
+
+        const sel = isSelected ? ' selected' : '';
+
+        const checkIcon = q.multi
+          ? `<i class="ic">
+               <svg
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round">
+                 ${
+                   isSelected
+                     ? '<rect x="4" y="4" width="16" height="16" rx="5"/><path d="M8 12.5l2.5 2.5L16 9"/>'
+                     : '<rect x="4" y="4" width="16" height="16" rx="5"/>'
+                 }
+               </svg>
+             </i>`
+          : '';
+
+        return `
+          <button
+            type="button"
+            class="option${sel}"
+            data-value="${o.value}">
+            ${
+              q.multi
+                ? `<span class="option-check">${checkIcon}<span>${tf(o.label)}</span></span>`
+                : tf(o.label)
+            }
+          </button>
+        `;
+      }).join('');
+
+      questionWrap.innerHTML = `
+        <section class="survey-question active">
+          <h3>${tf(q.title)}</h3>
+          ${tf(q.help) ? `<p class="survey-help">${tf(q.help)}</p>` : ''}
+          <div class="option-grid" data-group="${q.id}">
+            ${opts}
+          </div>
+        </section>
+      `;
+
+      $$('.option', questionWrap).forEach(btn=>{
+        btn.addEventListener('click', ()=>{
+          if(q.multi){
+            const arr = state.answers[q.id] || [];
+            const v = btn.dataset.value;
+            const idx = arr.indexOf(v);
+
+            if(idx>=0) arr.splice(idx,1);
+            else arr.push(v);
+
+            state.answers[q.id] = arr;
+            renderSurvey();
+          }else{
+            state.answers[q.id] = btn.dataset.value;
+
+            $$('.option', questionWrap).forEach(x=>{
+              x.classList.toggle('selected', x===btn);
+            });
+          }
+
+          msg.textContent='';
+        });
+      });
+
+      progressText.textContent = `${state.current+1} / ${total()}`;
+      progressBar.style.width = `${((state.current+1)/total())*100}%`;
+
+      prevBtn.disabled = state.current===0;
+      nextBtn.textContent =
+        state.current===total()-1
+          ? t('submit')
+          : t('next');
+
+      msg.textContent='';
+    }
+
+    function validateCurrent(){
+      const q = getQuestions()[state.current];
+      const val = state.answers[q.id];
+
+      const ok = q.multi
+        ? Array.isArray(val) && val.length>0
+        : !!val;
+
+      if(!ok){
+        msg.textContent = t('needAnswer');
+        return false;
+      }
+
+      return true;
+    }
+
+    prevBtn.addEventListener('click', ()=>{
+      if(state.current<=0) return;
+      state.current--;
+      renderSurvey();
+    });
+
+    nextBtn.addEventListener('click', async ()=>{
+      if(!validateCurrent()) return;
+
+      if(state.current < total()-1){
+        state.current++;
+        renderSurvey();
+        return;
+      }
+
+      await submitSurvey();
+    });
+
+    function collectTracking(){
+      const params = new URLSearchParams(location.search);
+      const keys = [
+        'utm_source',
+        'utm_medium',
+        'utm_campaign',
+        'utm_content',
+        'utm_term',
+        'fbclid'
+      ];
+
+      const out = {};
+
+      keys.forEach(k=>{
+        out[k] = (params.get(k)||'').slice(0,300)||null;
+      });
+
+      out.referrer = (document.referrer||'').slice(0,500)||null;
+      out.page_path = location.pathname.slice(0,300);
+      out.variant =
+        (params.get('v')||params.get('variant')||'').slice(0,80)||null;
+
+      return out;
+    }
+
+    function payload(){
+      const flatAnswers = {};
+
+      Object.entries(state.answers).forEach(([k,v])=>{
+        flatAnswers[k] = Array.isArray(v)
+          ? v.join(',')
+          : v;
+      });
+
+      return {
+        site: window.SITE_ID,
+        language: state.lang,
+        answers: flatAnswers,
+        website: $('#website')?.value || '',
+        ...collectTracking()
+      };
+    }
+
+    async function submitSurvey(){
+      nextBtn.disabled = true;
+      prevBtn.disabled = true;
+      nextBtn.textContent = t('sending');
+      msg.textContent='';
+
+      const data = payload();
+      const SHEET_ENDPOINT = '/api/submit';
+
+      const isLocal =
+        location.protocol==='file:' ||
+        /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+
+      console.log('[LANDING] survey submitted', data);
+
+      if(isLocal){
+        setTimeout(()=>showSuccess(false), 250);
+        return;
+      }
+
+      try {
+        const res = await fetch(SHEET_ENDPOINT, {
+          method:'POST',
+          headers:{
+            'Content-Type':'application/json'
+          },
+          body:JSON.stringify(data)
+        });
+
+        if(!res.ok){
+          throw new Error(`HTTP ${res.status}`);
+        }
+
+        showSuccess(true);
+
+      } catch (err) {
+        console.error('[LANDING] survey save failed', err);
+
+        msg.textContent = t('saveError');
+        nextBtn.disabled = false;
+        prevBtn.disabled = state.current===0;
+        nextBtn.textContent = t('submit');
+      }
+    }
+
+    function renderSummary(){
+      const summary = $('#surveySummary');
+      if(!summary) return;
+
+      const rows = getQuestions().map(q=>{
+        const val = state.answers[q.id];
+        let display = '—';
+
+        if(q.multi && Array.isArray(val) && val.length){
+          display = val
+            .map(v=>tf(q.options.find(o=>o.value===v)?.label))
+            .join(', ');
+        }else if(val){
+          const opt = q.options.find(o=>o.value===val);
+          display = opt ? tf(opt.label) : '—';
+        }
+
+        return [tf(q.title), display];
+      });
+
+      summary.innerHTML = rows
+        .map(([k,v])=>`
+          <div class="summary-row">
+            <span>${k}</span>
+            <strong>${v}</strong>
+          </div>
+        `)
+        .join('');
+    }
+
+    function showSuccess(saved){
+      state.submitted = true;
+
+      form.style.display='none';
+      success.classList.add('show');
+
+      $('#successBody').textContent =
+        saved
+          ? t('successBody')
+          : t('localSuccessBody');
+
+      $('.survey-success h3').textContent =
+        saved
+          ? t('successTitle')
+          : t('localSuccessTitle');
+
+      renderSummary();
+
+      success.scrollIntoView({
+        behavior:'smooth',
+        block:'center'
+      });
+    }
+
+    $('#resetSurvey').addEventListener('click', ()=>{
+      Object.assign(state, {
+        current:0,
+        answers:{},
+        submitted:false
+      });
+
+      $('#website').value='';
+
+      success.classList.remove('show');
+      form.style.display='';
+
+      nextBtn.disabled=false;
+
+      renderSurvey();
+
+      form.scrollIntoView({
+        behavior:'smooth',
+        block:'center'
+      });
+    });
+
+    /* Mobile sticky */
+    const sticky = $('#mobileSticky');
+    const surveySection = $('#survey');
+
+    function updateSticky(){
+      if(innerWidth>767){
+        sticky.classList.remove('show');
+        sticky.setAttribute('aria-hidden','true');
+        return;
+      }
+
+      const y = scrollY;
+
+      const show =
+        y > innerHeight*.65 &&
+        y < surveySection.offsetTop - 160;
+
+      sticky.classList.toggle('show', show);
+      sticky.setAttribute('aria-hidden', String(!show));
+    }
+
+    addEventListener('scroll', updateSticky, {passive:true});
+    addEventListener('resize', updateSticky, {passive:true});
+
+    applyLanguage(getInitialLang());
+    renderSurvey();
+    updateSticky();
+  })();
+  </script>
+
+  <script src="tracking.js"></script>
+</body>
+</html>
